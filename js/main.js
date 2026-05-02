@@ -1,9 +1,22 @@
 const navLinks = document.getElementById('navLinks');
 const menuToggle = document.querySelector('.menu-toggle');
 if (menuToggle) {
+  menuToggle.innerHTML = '<span></span><span></span><span></span>';
+  menuToggle.setAttribute('aria-label', 'Open navigation menu');
   menuToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open', open);
     menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  });
+
+  navLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    });
   });
 }
 
@@ -155,7 +168,7 @@ function listPanel(title, items) {
   return `<h4>${title}</h4><ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
 }
 
-function openModal(item) {
+function openModal(item, defaultTab = 'details') {
   modalContent.innerHTML = `
     <div class="modal-hero"><img src="assets/photos/${item.image}" alt="${item.name} event image"></div>
     <div class="modal-body">
@@ -175,15 +188,27 @@ function openModal(item) {
       <div class="tab-panel" data-panel="amenities">${listPanel('Amenities', item.amenities)}</div>
     </div>`;
 
-  modalContent.querySelectorAll('.tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const tab = button.dataset.tab;
-      modalContent.querySelectorAll('.tab-button').forEach(btn => btn.classList.toggle('active', btn === button));
-      modalContent.querySelectorAll('.tab-panel').forEach(panel => panel.classList.toggle('active', panel.dataset.panel === tab));
+  const activateTab = (tab) => {
+    modalContent.querySelectorAll('.tab-button').forEach(btn => {
+      const isActive = btn.dataset.tab === tab;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
+    modalContent.querySelectorAll('.tab-panel').forEach(panel => {
+      panel.classList.toggle('active', panel.dataset.panel === tab);
+    });
+  };
+
+  modalContent.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => activateTab(button.dataset.tab));
   });
 
-  if (typeof modal.showModal === 'function') modal.showModal();
+  activateTab(defaultTab);
+
+  if (typeof modal.showModal === 'function') {
+    modal.showModal();
+    document.body.classList.add('modal-open');
+  }
 }
 
 if (grid) {
@@ -195,27 +220,36 @@ if (grid) {
         <small>${item.date} · ${item.time}</small>
         <h3>${item.name}</h3>
         <p>${item.theme}</p>
-        <div class="pill-row"><span class="pill">Details</span><span class="pill">Activities</span><span class="pill">Schedule</span><span class="pill">Amenities</span></div>
+        <div class="pill-row"><button class="pill" data-tab="details" type="button">Details</button><button class="pill" data-tab="activities" type="button">Activities</button><button class="pill" data-tab="schedule" type="button">Schedule</button><button class="pill" data-tab="amenities" type="button">Amenities</button></div>
       </div>
     </article>
   `).join('');
 
   grid.querySelectorAll('.location-card').forEach(card => {
     const item = locations[Number(card.dataset.index)];
-    card.addEventListener('click', () => openModal(item));
+    card.addEventListener('click', (event) => {
+      const tabButton = event.target.closest('[data-tab]');
+      openModal(item, tabButton ? tabButton.dataset.tab : 'details');
+    });
     card.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        openModal(item);
+        openModal(item, 'details');
       }
     });
     observer.observe(card);
   });
 }
 
-modalClose?.addEventListener('click', () => modal.close());
+function closeModal() {
+  modal?.close();
+  document.body.classList.remove('modal-open');
+}
+
+modalClose?.addEventListener('click', closeModal);
+modal?.addEventListener('close', () => document.body.classList.remove('modal-open'));
 modal?.addEventListener('click', event => {
   const rect = modal.getBoundingClientRect();
   const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
-  if (outside) modal.close();
+  if (outside) closeModal();
 });
