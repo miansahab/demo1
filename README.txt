@@ -1,10 +1,10 @@
-Metro Detroit Youth Day 2.026 Homepage Mockup
+MDYD 2.026 Website Update
 
-Structure:
-- index.html
-- css/styles.css
-- js/main.js
-- assets/ contains all referenced images
+What changed:
+- Removed white background containers behind logo placements.
+- Added transparent-background logo PNGs and dark-site versions in assets/logos.
+- Reworked sections so layouts do not overlap/collide on desktop or mobile.
+- Location click modal now has non-empty Details, Activities, Schedule and Amenities tabs.
+- Address/time fields remain honest placeholders until partner-approved details are supplied.
 
-How to view:
-Open index.html in a browser. Keep the folder structure intact so image paths do not break.
+Open index.html in a browser.
