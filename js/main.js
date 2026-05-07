@@ -189,7 +189,7 @@ function openModal(item, defaultTab = 'details') {
     <div class="modal-hero"><img src="assets/photos/${item.image}" alt="${item.name} event image"></div>
     <div class="modal-body">
       <img class="modal-logo" src="assets/logos/mdyd-compact-badge-dark.png" alt="MDYD logo">
-      <p class="eyebrow">${item.date} · ${item.time}</p>
+      <p class="eyebrow"><span>${item.date}</span><span class="eyebrow-time">${item.time}</span></p>
       <h3>${item.name}</h3>
       <p class="lead">${item.theme}</p>
       <p>${item.description}</p>
@@ -234,12 +234,12 @@ if (grid) {
       <img class="location-photo" src="assets/photos/${item.image}" alt="${item.name} image">
       <span class="location-badge"><img src="assets/logos/mdyd-compact-badge-dark.png" alt="MDYD badge"></span>
       <div class="location-body">
-        <small>${item.date} · ${item.time}</small>
+        <small class="card-date"><span>${item.date}</span><span>${item.time}</span></small>
         <h3>${item.name}</h3>
         <p><strong>${item.theme}</strong></p>
         <p>${item.description}</p>
         <p class="card-address">${item.address.replace(' — GPS marker to be inserted','').replace(' — GPS markers to be inserted','')}</p>
-        <span class="profile-link">View full location profile</span>
+        <span class="profile-link">View Full Location Info</span>
       </div>
     </article>
   `).join('');

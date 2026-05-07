@@ -24,3 +24,8 @@ Included source/reference files:
 - docs/Canva BGCGD x MDYD.zip
 - docs/Website Copy and Layout - Condensed.pdf
 - docs/metrodetroityouthday_logos_updated.pdf
+
+
+Latest update notes:
+- MDYD DL logo files integrated as transparent PNG assets.
+- Scholarship, Vendor and Volunteer links currently point to placeholder HTML files because the final form files were not included in the uploads. Replace them in /docs when received.
