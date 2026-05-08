@@ -91,3 +91,58 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
 @media(max-width:1200px){.hero-brand-row{grid-template-columns:minmax(300px,1fr) minmax(320px,.95fr);gap:32px}.hero-brand-row .hero-logo{width:min(400px,100%)}.hero-partner-lockup .partner-lockup-title{font-size:1.12rem}.hero-partner-lockup img{width:min(100%,540px)}}
 @media(max-width:1050px){.partner-strip-inner{grid-template-columns:1fr;gap:8px;padding:10px 0;min-height:0}.partner-label{text-align:center;white-space:normal;font-size:.86rem}.partner-track{animation-duration:40s !important;gap:26px}.partner-track span{font-size:.8rem}.hero-brand-row{grid-template-columns:1fr;gap:18px;align-items:flex-start}.hero-brand-row .hero-logo{width:min(420px,92vw)}.hero-brand-row .hero-partner-lockup{max-width:100%}.hero-partner-lockup img{transform:none;width:min(100%,640px)}.hero-partner-lockup .partner-lockup-title{max-width:640px}}
 @media(max-width:650px){.partner-strip{display:block !important}.partner-strip-inner{gap:6px;padding:8px 0}.partner-label{font-size:.74rem;line-height:1.2}.partner-marquee{mask-image:none}.partner-track{animation-duration:45s !important;gap:18px}.partner-track span{font-size:.72rem}.hero-brand-row .hero-logo{width:min(320px,84vw)}.hero-partner-lockup .partner-lockup-title{font-size:.98rem}.hero-partner-lockup .partner-lockup-title::after{width:84px;margin-top:10px}.hero-partner-lockup img{width:min(100%,520px)}.partner-lockup-panel img{max-height:180px}}
+
+
+/* Smart-device fix for partnership heading */
+.partner-label span{display:block}
+.hero-partner-lockup .partner-lockup-title span{display:block}
+@media(max-width:650px){
+  .partner-strip{padding:4px 0 6px}
+  .partner-strip-inner{padding:6px 0 4px}
+  .partner-label{display:block;max-width:100%;font-size:.7rem;line-height:1.22;letter-spacing:.03em;padding:0 10px;text-align:center}
+  .partner-label span + span{margin-top:2px}
+  .partner-marquee{width:100%;overflow:hidden}
+  .partner-track{min-width:max-content;animation-duration:52s !important;gap:16px;padding-inline:6px}
+  .partner-track span{font-size:.68rem;letter-spacing:.03em}
+  .hero-partner-lockup{padding-top:2px}
+  .hero-partner-lockup .partner-lockup-title{font-size:.92rem;line-height:1.18;max-width:100%;text-wrap:pretty}
+  .hero-partner-lockup .partner-lockup-title span{margin-top:2px}
+}
+@media(max-width:420px){
+  .partner-label{font-size:.64rem;line-height:1.18;padding:0 8px}
+  .partner-track{animation-duration:56s !important;gap:14px}
+  .partner-track span{font-size:.64rem}
+  .hero-partner-lockup .partner-lockup-title{font-size:.84rem}
+}
+
+
+/* Mobile partnership strip refinement */
+.partner-label span{display:inline}
+.hero-partner-lockup .partner-lockup-title span{display:inline}
+@media(max-width:650px){
+  .partner-strip{padding:0;overflow:hidden}
+  .partner-strip-inner{display:block;padding:8px 10px 7px;min-height:auto}
+  .partner-label{display:block;white-space:nowrap;text-align:center;max-width:100%;font-size:.56rem;line-height:1.1;letter-spacing:.02em;padding:0;margin:0 auto;overflow:hidden;text-overflow:clip}
+  .partner-marquee{display:none !important}
+  .hero-partner-lockup .partner-lockup-title{white-space:nowrap;font-size:.76rem;line-height:1.1;max-width:100%;letter-spacing:.02em;text-wrap:normal;overflow:hidden}
+}
+@media(max-width:420px){
+  .partner-label{font-size:.5rem;letter-spacing:.01em}
+  .hero-partner-lockup .partner-lockup-title{font-size:.68rem}
+}
+
+
+/* Final mobile partnership strip fix: keep title on one line and restore sliding partner names */
+@media (max-width:650px){
+  .partner-strip{padding:0;overflow:hidden}
+  .partner-strip-inner{display:flex !important;flex-direction:column;align-items:stretch;gap:6px;padding:8px 0 8px;min-height:auto}
+  .partner-label{display:block;white-space:nowrap;text-align:center;max-width:100%;font-size:.62rem;line-height:1.08;letter-spacing:.015em;padding:0 10px;margin:0;overflow:hidden;text-overflow:clip}
+  .partner-marquee{display:block !important;width:100%;overflow:hidden;mask-image:none}
+  .partner-track{display:flex;align-items:center;gap:20px;white-space:nowrap;height:auto;padding:0 10px 2px;animation:marquee 30s linear infinite !important;will-change:transform}
+  .partner-track span{font-size:.64rem;line-height:1.1}
+}
+@media (max-width:420px){
+  .partner-label{font-size:.54rem}
+  .partner-track{gap:16px}
+  .partner-track span{font-size:.58rem}
+}
