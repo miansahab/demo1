@@ -38,7 +38,7 @@ const locations = [
     time: '9:00 AM – 3:00 PM',
     theme: 'Traditional MDYD Festivities Plus',
     image: 'Carnival Inflatable.jpeg',
-    address: '99 Pleasure Drive, Detroit 48207 (between Fountain and Casino) — GPS marker to be inserted',
+    addressLines: ['99 Pleasure Drive', 'Detroit, MI  48207', '(between Fountain and Casino)'],
     description: 'Field games, Youth IDOL competition, technology simulations, career exploration, arts & culture.',
     activities: ['Field games', 'Youth IDOL competition', 'Technology simulations', 'Career exploration', 'Arts & culture'],
     schedule: ['9:00 AM – Arrival and check-in', 'Morning – Field games, simulations and activity rotations', 'Midday – Youth IDOL and arts & culture programming', 'Afternoon – Career exploration and closing activities', '3:00 PM – Departure'],
@@ -54,7 +54,7 @@ const locations = [
     time: '9:30 AM – 1:45 PM',
     theme: 'Tuesday Market Youth Club (Healthy Eating)',
     image: 'Kids Painting.jpg',
-    address: '2934 Russell Street, Detroit 48207 (Shed 2) — GPS marker to be inserted',
+    addressLines: ['2934 Russell Street', 'Detroit, MI  48207', '(Shed 2)'],
     description: 'Food tasting, cooking demonstrations, Farmers Market exploration + shopping, Zumba, yoga.',
     activities: ['Food tasting', 'Cooking demonstrations', 'Farmers Market exploration + shopping', 'Zumba', 'Yoga'],
     schedule: ['9:30 AM – Arrival and check-in', 'Morning – Market exploration and cooking demonstrations', 'Midday – Food tasting and healthy eating activities', 'Afternoon – Zumba / yoga and closeout', '1:45 PM – Departure'],
@@ -70,7 +70,7 @@ const locations = [
     time: '8:30 AM – 3:30 PM',
     theme: 'BGC Open House Clubs Hop',
     image: 'Registration.jpeg',
-    address: 'Diehl / Dauch / Eastpointe / Jackson / Michigan Central (club hop via bus) — GPS markers to be inserted',
+    addressLines: ['Dauch / Diehl / Eastpointe /', 'Jackson / Michigan Central', '(Club hop via bus)'],
     description: 'Music studio, culinary kitchen, e-sports, innovation center, industry exploration, games.',
     activities: ['Music studio', 'Culinary kitchen', 'E-sports', 'Innovation center', 'Industry exploration', 'Games'],
     schedule: ['8:30 AM – Arrival and bus coordination', 'Morning – Club hop rotations', 'Midday – Program showcases and lunch / hydration break', 'Afternoon – Industry exploration and games', '3:30 PM – Departure'],
@@ -86,7 +86,7 @@ const locations = [
     time: '6:00 PM – 8:15 PM',
     theme: 'Health-Focused Youth Wellness',
     image: 'Dancers.jpg',
-    address: '7241 McDonald St. Warren Trailhead Joe Louis Greenway — GPS marker to be inserted',
+    addressLines: ['7241 McDonald Street', 'Detroit, MI  48210', '(Trailhead)'],
     description: 'Guided youth yoga + fitness session, wellness + mindfulness activities, light movement + recovery.',
     activities: ['Guided youth yoga + fitness session', 'Wellness + mindfulness activities', 'Light movement + recovery'],
     schedule: ['6:00 PM – Check-in and welcome', '6:20 PM – Guided youth yoga + fitness session', '7:15 PM – Wellness and mindfulness activities', '7:50 PM – Light movement + recovery', '8:15 PM – Closeout'],
@@ -102,9 +102,9 @@ const locations = [
     time: '10:00 AM – 2:00 PM',
     theme: 'Occupy the Summer: Carnival + Girls Flag Football',
     image: 'Flag Football Trophy.jpeg',
-    address: 'Diehl Boys & Girls Club, 4242 Collingwood St, Detroit, MI 48204 — GPS marker to be inserted',
-    description: 'Carnival games, flag football competition, marching band.',
-    activities: ['Carnival games', 'Flag football competition', 'Marching band'],
+    addressLines: ['4242 Collingwood St', 'Detroit, MI 48204'],
+    description: 'Free haircuts, carnival rides, resource vendors, bounce houses, face painting, live performances.',
+    activities: ['Free haircuts', 'Carnival rides', 'Resource vendors', 'Bounce houses', 'Face painting', 'Live performances'],
     schedule: ['10:00 AM – Arrival and check-in', 'Morning – Carnival games open', 'Midday – Flag football competition', 'Afternoon – Marching band / recognition moment', '2:00 PM – Departure'],
     directions: 'Use Diehl Boys & Girls Club at 4242 Collingwood St. Final GPS marker to be inserted.',
     parking: 'Parking, team drop-off and equipment unloading zones to be finalized.',
@@ -118,7 +118,7 @@ const locations = [
     time: '9:00 AM – 2:00 PM',
     theme: 'Drone Demo Day',
     image: 'Robotics.jpg',
-    address: '2050 15th St, Detroit, MI 48216 (Front Lawn) — GPS marker to be inserted',
+    addressLines: ['2050 15th Street', 'Detroit, MI 48216', '(Front Lawn)'],
     description: 'Hands-on flight training, obstacle courses, aerial mapping education, career exploration.',
     activities: ['Hands-on flight training', 'Obstacle courses', 'Aerial mapping education', 'Career exploration'],
     schedule: ['9:00 AM – Arrival and safety briefing', 'Morning – Hands-on flight training and obstacle courses', 'Midday – Aerial mapping education', 'Afternoon – Career exploration', '2:00 PM – Departure'],
@@ -134,7 +134,7 @@ const locations = [
     time: '11:00 AM – 6:00 PM',
     theme: 'Summer Celebration',
     image: 'Flag Football .jpeg',
-    address: '7241 McDonald St. Warren Trailhead Joe Louis Greenway — GPS marker to be inserted',
+    addressLines: ['7241 McDonald Street', 'Detroit, MI  48210', '(Trailhead)'],
     description: 'Family-friendly activities, youth-centered programs, community resources, games, music.',
     activities: ['Family-friendly activities', 'Youth-centered programs', 'Community resources', 'Games', 'Music'],
     schedule: ['11:00 AM – Arrival and welcome', 'Afternoon – Open activity rotations and youth-centered programs', 'Community resource and game blocks throughout the day', 'Music and celebration moments', '6:00 PM – Closeout'],
@@ -150,7 +150,7 @@ const locations = [
     time: '10:00 AM – 2:00 PM',
     theme: 'Youth Sports Showcase',
     image: 'College Row.jpg',
-    address: 'Ralph C. Wilson Park, 1801 W. Jefferson, Detroit 48216 — GPS marker to be inserted',
+    addressLines: ['Ralph C. Wilson Park', '1801 W. Jefferson', 'Detroit, MI  48216'],
     description: 'Sports, robotics, chess, on-site youth sports physicals, literacy, mental health resources.',
     activities: ['Sports', 'Robotics', 'Chess', 'On-site youth sports physicals', 'Literacy', 'Mental health resources'],
     schedule: ['10:00 AM – Arrival and check-in', 'Morning – Sports showcase rotations', 'Midday – Robotics, chess, literacy and resource stations', 'Afternoon – Youth sports physicals and closing moment', '2:00 PM – Departure'],
@@ -166,12 +166,18 @@ const modal = document.getElementById('locationModal');
 const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
 
+
+function formatAddress(item) {
+  if (Array.isArray(item.addressLines)) return item.addressLines.join('<br>');
+  return (item.address || '').replace(' — GPS marker to be inserted','').replace(' — GPS markers to be inserted','');
+}
+
 function detailsPanel(item) {
   const rows = [
     ['Event Title', item.theme],
     ['Date', item.date],
     ['Time', item.time],
-    ['Address', item.address],
+    ['Address', formatAddress(item)],
     ['Description', item.description],
     ['Directions', item.directions],
     ['Parking', item.parking],
@@ -238,7 +244,7 @@ if (grid) {
         <h3>${item.name}</h3>
         <p><strong>${item.theme}</strong></p>
         <p>${item.description}</p>
-        <p class="card-address">${item.address.replace(' — GPS marker to be inserted','').replace(' — GPS markers to be inserted','')}</p>
+        <p class="card-address">${formatAddress(item)}</p>
         <span class="profile-link">View Full Location Info</span>
       </div>
     </article>
