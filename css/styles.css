@@ -188,3 +188,29 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
   .hero-partner-lockup .partner-lockup-title{font-size:.84rem !important;}
   .hero-partner-lockup img{width:100% !important;}
 }
+
+
+/* Slightly larger hero partnership lockup */
+.hero-brand-row{grid-template-columns:minmax(340px,.92fr) minmax(620px,1.08fr) !important;gap:52px !important;max-width:1240px !important;}
+.hero-brand-row .hero-partner-lockup{max-width:780px !important;margin-top:8px !important;}
+.hero-partner-lockup .partner-lockup-title{max-width:700px !important;font-size:1.22rem !important;margin-bottom:18px !important;}
+.hero-partner-lockup img{width:min(100%,760px) !important;filter:drop-shadow(0 12px 28px rgba(0,0,0,.36)) brightness(1.1) !important;}
+@media (max-width:1200px){.hero-brand-row{grid-template-columns:minmax(320px,.95fr) minmax(500px,1.05fr) !important;gap:38px !important}.hero-brand-row .hero-partner-lockup{max-width:700px !important}.hero-partner-lockup img{width:min(100%,680px) !important}}
+@media (max-width:1050px){.hero-brand-row .hero-partner-lockup{max-width:100% !important}.hero-partner-lockup img{width:min(100%,660px) !important}}
+
+/* Co-Chairs title formatting */
+.chairs-grid article small{
+  line-height:1.35;
+  max-width:250px;
+  margin:6px auto 0;
+}
+
+
+/* Co-chairs desktop one-line layout fix */
+@media (min-width:1051px){
+  .chairs-grid{grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:14px !important;align-items:stretch;}
+  .chairs-grid article{min-height:176px;padding:20px 18px !important;}
+  .chairs-grid span{font-size:1.62rem !important;line-height:.96 !important;}
+  .chairs-grid small{font-size:.76rem;line-height:1.28;display:block;}
+  .chairs-grid article small{max-width:none !important;margin:8px 0 0 !important;}
+}
