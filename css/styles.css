@@ -206,11 +206,529 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
 }
 
 
-/* Co-chairs desktop one-line layout fix */
-@media (min-width:1051px){
-  .chairs-grid{grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:14px !important;align-items:stretch;}
-  .chairs-grid article{min-height:176px;padding:20px 18px !important;}
-  .chairs-grid span{font-size:1.62rem !important;line-height:.96 !important;}
-  .chairs-grid small{font-size:.76rem;line-height:1.28;display:block;}
-  .chairs-grid article small{max-width:none !important;margin:8px 0 0 !important;}
+/* === FINAL HERO + CO-CHAIRS REFINEMENT === */
+.hero{padding-top:86px !important;padding-bottom:76px !important;min-height:calc(100vh - 118px) !important;}
+.hero-inner{grid-template-columns:minmax(0,1.02fr) minmax(360px,.88fr) !important;gap:42px !important;align-items:end !important;}
+.hero-copy{max-width:680px;position:relative;z-index:2;}
+.hero-brand-row{display:grid !important;grid-template-columns:minmax(320px,.92fr) minmax(360px,1fr) !important;align-items:center !important;gap:34px !important;max-width:940px !important;margin-bottom:18px !important;}
+.hero-brand-row .hero-logo{width:min(430px,100%) !important;max-width:100% !important;margin:0 !important;}
+.hero-brand-row .hero-partner-lockup{align-self:center !important;justify-self:start !important;max-width:540px !important;width:100% !important;margin:0 !important;padding:0 !important;background:transparent !important;border:0 !important;box-shadow:none !important;overflow:visible !important;}
+.hero-partner-lockup .partner-lockup-title{font-size:1.18rem !important;line-height:1.08 !important;max-width:500px !important;margin:0 0 14px !important;letter-spacing:.025em !important;text-wrap:balance !important;white-space:normal !important;}
+.hero-partner-lockup .partner-lockup-title::after{width:112px !important;height:3px !important;margin-top:12px !important;}
+.hero-partner-lockup img{display:block !important;width:100% !important;max-width:520px !important;height:auto !important;max-height:none !important;object-fit:contain !important;filter:drop-shadow(0 10px 24px rgba(0,0,0,.34)) brightness(1.08) !important;transform:none !important;}
+.hero .eyebrow{margin:10px 0 14px !important;}
+.hero h1{max-width:760px;}
+.hero .lead{max-width:620px;}
+.hero-photo-board{min-height:520px !important;align-self:end;}
+.photo-main{width:70% !important;height:56% !important;right:4% !important;top:4% !important;}
+.photo-small.top{top:42% !important;left:2% !important;width:42% !important;height:28% !important;}
+.photo-small.bottom{right:4% !important;bottom:2% !important;width:46% !important;height:30% !important;}
+
+.chairs-section{padding-top:54px !important;}
+.chairs-section .section-heading.center{max-width:960px;margin-bottom:42px !important;}
+.chairs-grid{display:grid !important;grid-template-columns:repeat(6,minmax(0,1fr)) !important;gap:22px !important;align-items:stretch;max-width:1220px;margin-inline:auto;}
+.chairs-grid .chair-card{position:relative;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 24px 24px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(233,0,138,.18),rgba(10,12,22,.92) 46%,rgba(0,139,210,.18));box-shadow:12px 12px 0 rgba(255,225,0,.14);overflow:hidden;}
+.chairs-grid .chair-card::before{content:"";position:absolute;inset:auto auto 0 0;width:100%;height:4px;background:linear-gradient(90deg,var(--yellow),var(--cyan),transparent);opacity:.95;}
+.chairs-grid .chair-card span{position:relative;z-index:1;font-family:var(--display);font-size:clamp(2rem,2.2vw,2.6rem);line-height:.94;text-transform:uppercase;color:var(--yellow);margin-bottom:12px;}
+.chairs-grid .chair-card small{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;color:#fff;text-transform:uppercase;font-weight:900;line-height:1.18;font-size:1rem;}
+.chair-role{display:block;color:#fff;}
+.chair-org{display:block;color:#dce7f6;max-width:24ch;}
+.chairs-grid .chair-card:nth-child(1){grid-column:1 / span 2;}
+.chairs-grid .chair-card:nth-child(2){grid-column:3 / span 2;}
+.chairs-grid .chair-card:nth-child(3){grid-column:5 / span 2;}
+.chairs-grid .chair-card:nth-child(4){grid-column:2 / span 2;}
+.chairs-grid .chair-card:nth-child(5){grid-column:4 / span 2;}
+
+@media (max-width: 1180px){
+  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(320px,.84fr) !important;gap:34px !important;}
+  .hero-brand-row{grid-template-columns:minmax(280px,.92fr) minmax(320px,1fr) !important;gap:26px !important;max-width:860px !important;}
+  .hero-brand-row .hero-logo{width:min(380px,100%) !important;}
+  .hero-partner-lockup .partner-lockup-title{font-size:1.04rem !important;max-width:440px !important;}
+  .hero-partner-lockup img{max-width:460px !important;}
+  .hero-photo-board{min-height:480px !important;}
+  .chairs-grid{gap:18px !important;}
+  .chairs-grid .chair-card{padding:24px 20px 22px;min-height:176px;}
+}
+@media (max-width: 980px){
+  .hero{padding-top:74px !important;padding-bottom:70px !important;}
+  .hero-inner{grid-template-columns:1fr !important;gap:26px !important;align-items:start !important;}
+  .hero-brand-row{grid-template-columns:1fr !important;gap:18px !important;max-width:100% !important;}
+  .hero-brand-row .hero-logo{width:min(390px,92vw) !important;}
+  .hero-brand-row .hero-partner-lockup{max-width:560px !important;}
+  .hero-partner-lockup .partner-lockup-title{font-size:1rem !important;max-width:100% !important;}
+  .hero-partner-lockup img{max-width:560px !important;}
+  .hero-photo-board{min-height:460px !important;max-width:760px;width:100%;margin:0 auto;}
+  .chairs-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;max-width:860px;}
+  .chairs-grid .chair-card:nth-child(n){grid-column:auto !important;}
+}
+@media (max-width: 640px){
+  .hero{padding-top:58px !important;padding-bottom:56px !important;}
+  .hero-brand-row .hero-logo{width:min(300px,82vw) !important;}
+  .hero-brand-row .hero-partner-lockup{max-width:100% !important;}
+  .hero-partner-lockup .partner-lockup-title{font-size:.92rem !important;line-height:1.14 !important;margin-bottom:10px !important;}
+  .hero-partner-lockup .partner-lockup-title::after{width:88px !important;height:3px !important;}
+  .hero-partner-lockup img{max-width:100% !important;}
+  .hero h1{font-size:clamp(3.3rem,17vw,5.4rem) !important;line-height:.92 !important;}
+  .hero .lead{font-size:1rem !important;}
+  .hero-photo-board{min-height:380px !important;}
+  .photo-main{width:74% !important;height:54% !important;right:0 !important;}
+  .photo-small.top{top:44% !important;width:46% !important;height:27% !important;left:0 !important;}
+  .photo-small.bottom{width:52% !important;height:28% !important;right:0 !important;}
+  .chairs-section .section-heading.center{margin-bottom:28px !important;}
+  .chairs-grid{grid-template-columns:1fr !important;gap:16px !important;}
+  .chairs-grid .chair-card{min-height:unset;padding:22px 18px 20px;}
+  .chairs-grid .chair-card span{font-size:1.8rem;}
+  .chairs-grid .chair-card small{font-size:.95rem;}
+}
+
+/* FINAL: revert hero heading/photos and co-chair cards */
+
+/* Hero heading + images only */
+.hero {
+  padding: 92px 0 82px !important;
+  min-height: calc(100vh - 118px) !important;
+}
+
+.hero-inner {
+  grid-template-columns: 1.05fr .95fr !important;
+  gap: 52px !important;
+  align-items: center !important;
+}
+
+.hero h1 {
+  font-size: clamp(4.4rem, 9vw, 8.8rem) !important;
+  line-height: .92 !important;
+  color: var(--yellow) !important;
+  text-shadow: 6px 6px 0 var(--pink), 11px 11px 0 rgba(0,139,210,.72) !important;
+  max-width: none !important;
+}
+
+.hero-photo-board {
+  position: relative !important;
+  min-height: 560px !important;
+  align-self: center !important;
+  max-width: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.photo-main {
+  right: 4% !important;
+  top: 2% !important;
+  width: 72% !important;
+  height: 58% !important;
+  box-shadow: 16px 16px 0 rgba(233,0,138,.78) !important;
+  transform: rotate(2deg) !important;
+}
+
+.photo-small.top {
+  left: 0 !important;
+  top: 38% !important;
+  width: 48% !important;
+  height: 32% !important;
+  box-shadow: -12px 12px 0 rgba(0,139,210,.82) !important;
+  transform: rotate(-3deg) !important;
+}
+
+.photo-small.bottom {
+  right: 0 !important;
+  bottom: 1% !important;
+  width: 52% !important;
+  height: 34% !important;
+  box-shadow: 12px 12px 0 rgba(255,225,0,.78) !important;
+  transform: rotate(3deg) !important;
+}
+
+/* Co-Chairs: old design, 3 top + 2 centered */
+.chairs-section {
+  padding-top: 30px !important;
+}
+
+.chairs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+}
+
+.chairs-grid article,
+.chairs-grid .chair-card {
+  min-height: 150px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 22px !important;
+  border: 1px solid var(--line) !important;
+  background: linear-gradient(135deg, rgba(233,0,138,.22), rgba(0,139,210,.12)) !important;
+  box-shadow: 10px 10px 0 rgba(255,225,0,.15) !important;
+  overflow: visible !important;
+}
+
+.chairs-grid article::before,
+.chairs-grid .chair-card::before {
+  display: none !important;
+}
+
+.chairs-grid article > span,
+.chairs-grid .chair-card > span {
+  font-family: var(--display) !important;
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  color: var(--yellow) !important;
+  margin: 0 0 10px !important;
+}
+
+.chairs-grid small {
+  display: block !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  color: #fff !important;
+  line-height: 1.25 !important;
+  font-size: .92rem !important;
+}
+
+.chair-role,
+.chair-org {
+  display: block !important;
+  color: #fff !important;
+  max-width: none !important;
+}
+
+/* 3 cards top row */
+.chairs-grid article:nth-child(1) {
+  grid-column: 1 / span 2 !important;
+}
+
+.chairs-grid article:nth-child(2) {
+  grid-column: 3 / span 2 !important;
+}
+
+.chairs-grid article:nth-child(3) {
+  grid-column: 5 / span 2 !important;
+}
+
+/* 2 cards centered second row */
+.chairs-grid article:nth-child(4) {
+  grid-column: 2 / span 2 !important;
+}
+
+.chairs-grid article:nth-child(5) {
+  grid-column: 4 / span 2 !important;
+}
+
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .hero-photo-board {
+    min-height: 500px !important;
+    max-width: 760px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .chairs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    max-width: 860px !important;
+  }
+
+  .chairs-grid article:nth-child(n) {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 58px 0 56px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5rem) !important;
+  }
+
+  .hero-photo-board {
+    min-height: 380px !important;
+  }
+
+  .photo-main {
+    width: 74% !important;
+    height: 54% !important;
+    right: 0 !important;
+    top: 4% !important;
+  }
+
+  .photo-small.top {
+    top: 44% !important;
+    width: 46% !important;
+    height: 27% !important;
+    left: 0 !important;
+  }
+
+  .photo-small.bottom {
+    width: 52% !important;
+    height: 28% !important;
+    right: 0 !important;
+    bottom: 2% !important;
+  }
+
+  .chairs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    min-height: 150px !important;
+  }
+}
+
+/* FINAL UPDATE: larger hero partnership logos + co-chairs one-line desktop layout */
+
+/* Increase the hero partnership logo lockup again */
+@media (min-width: 981px) {
+  .hero-brand-row {
+    max-width: 1160px !important;
+    grid-template-columns: minmax(320px, .82fr) minmax(560px, 1.18fr) !important;
+    gap: 46px !important;
+  }
+
+  .hero-brand-row .hero-partner-lockup {
+    max-width: 820px !important;
+    width: 100% !important;
+  }
+
+  .hero-partner-lockup img {
+    width: min(100%, 790px) !important;
+    max-width: 790px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 12px 28px rgba(0,0,0,.36)) brightness(1.12) !important;
+  }
+}
+
+/* Keep partner lockup strong on tablets without breaking layout */
+@media (max-width: 980px) {
+  .hero-brand-row .hero-partner-lockup {
+    max-width: 680px !important;
+  }
+
+  .hero-partner-lockup img {
+    width: 100% !important;
+    max-width: 680px !important;
+  }
+}
+
+/* Revert Co-Chairs to one desktop line */
+@media (min-width: 981px) {
+  .chairs-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    max-width: 1500px !important;
+    margin-inline: auto !important;
+    align-items: stretch !important;
+  }
+
+  .chairs-grid article:nth-child(n),
+  .chairs-grid .chair-card:nth-child(n) {
+    grid-column: auto !important;
+  }
+
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    min-height: 150px !important;
+    padding: 22px !important;
+  }
+
+  .chairs-grid article > span,
+  .chairs-grid .chair-card > span {
+    font-size: clamp(1.55rem, 1.8vw, 2rem) !important;
+  }
+
+  .chairs-grid small {
+    font-size: .86rem !important;
+    line-height: 1.22 !important;
+  }
+}
+
+/* FINAL UPDATE: symmetric Co-Chairs typography/layout */
+@media (min-width: 981px) {
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    min-height: 170px !important;
+    padding: 26px 22px 24px !important;
+    display: grid !important;
+    grid-template-rows: 72px 54px !important;
+    align-content: center !important;
+    justify-content: stretch !important;
+  }
+
+  .chairs-grid article > span,
+  .chairs-grid .chair-card > span {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    min-height: 72px !important;
+    margin: 0 !important;
+    font-family: var(--display) !important;
+    font-size: clamp(1.85rem, 1.95vw, 2.25rem) !important;
+    line-height: .96 !important;
+    letter-spacing: .01em !important;
+    text-transform: uppercase !important;
+    color: var(--yellow) !important;
+  }
+
+  .chairs-grid small {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 54px !important;
+    margin: 10px 0 0 !important;
+    font-size: .88rem !important;
+    line-height: 1.22 !important;
+    letter-spacing: .01em !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+  }
+
+  .chair-role,
+  .chair-org {
+    display: block !important;
+    color: #fff !important;
+    max-width: 22ch !important;
+  }
+
+  .chairs-grid article:nth-child(2) > span,
+  .chairs-grid .chair-card:nth-child(2) > span {
+    font-size: clamp(1.68rem, 1.75vw, 2.05rem) !important;
+  }
+
+  .chairs-grid article:nth-child(5) > span,
+  .chairs-grid .chair-card:nth-child(5) > span {
+    font-size: clamp(1.7rem, 1.78vw, 2.08rem) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .chairs-grid article > span,
+  .chairs-grid .chair-card > span {
+    font-family: var(--display) !important;
+    line-height: .96 !important;
+    color: var(--yellow) !important;
+  }
+
+  .chairs-grid small {
+    margin-top: 10px !important;
+  }
+}
+
+/* FINAL FIX: Co-Chairs card text containment and alignment */
+@media (min-width: 981px) {
+  .chairs-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    max-width: 1500px !important;
+    margin-inline: auto !important;
+    align-items: stretch !important;
+  }
+
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    min-height: 178px !important;
+    height: 178px !important;
+    padding: 24px 22px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .chairs-grid article:nth-child(n),
+  .chairs-grid .chair-card:nth-child(n) {
+    grid-column: auto !important;
+  }
+
+  .chairs-grid article > span,
+  .chairs-grid .chair-card > span {
+    display: block !important;
+    min-height: 0 !important;
+    margin: 0 0 12px !important;
+    font-family: var(--display) !important;
+    font-size: clamp(1.6rem, 1.65vw, 2rem) !important;
+    line-height: .96 !important;
+    letter-spacing: .01em !important;
+    text-transform: uppercase !important;
+    color: var(--yellow) !important;
+  }
+
+  .chairs-grid article:nth-child(2) > span,
+  .chairs-grid .chair-card:nth-child(2) > span,
+  .chairs-grid article:nth-child(5) > span,
+  .chairs-grid .chair-card:nth-child(5) > span {
+    font-size: clamp(1.45rem, 1.48vw, 1.78rem) !important;
+  }
+
+  .chairs-grid small {
+    display: block !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    font-family: var(--body) !important;
+    font-size: .82rem !important;
+    line-height: 1.22 !important;
+    letter-spacing: .01em !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+  }
+
+  .chairs-grid small span,
+  .chairs-grid .chair-card small span,
+  .chairs-grid article small span,
+  .chair-role,
+  .chair-org {
+    display: block !important;
+    font-family: var(--body) !important;
+    font-size: .82rem !important;
+    line-height: 1.22 !important;
+    letter-spacing: .01em !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    overflow: hidden !important;
+  }
+
+  .chairs-grid small span,
+  .chairs-grid .chair-card small span,
+  .chairs-grid article small span,
+  .chair-role,
+  .chair-org {
+    font-family: var(--body) !important;
+    font-size: .9rem !important;
+    line-height: 1.24 !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+  }
 }
