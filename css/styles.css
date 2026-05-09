@@ -732,3 +732,36 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
     color: #fff !important;
   }
 }
+
+/* FINAL MOBILE FIX: align Co-Chairs description left under heading */
+@media (max-width: 980px) {
+  .chairs-grid article,
+  .chairs-grid .chair-card {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .chairs-grid article > span,
+  .chairs-grid .chair-card > span {
+    text-align: left !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+  }
+
+  .chairs-grid small {
+    text-align: left !important;
+    align-self: flex-start !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .chairs-grid small span,
+  .chairs-grid .chair-card small span,
+  .chairs-grid article small span,
+  .chair-role,
+  .chair-org {
+    text-align: left !important;
+    margin-left: 0 !important;
+    align-self: flex-start !important;
+  }
+}
