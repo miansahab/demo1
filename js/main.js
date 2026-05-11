@@ -39,6 +39,7 @@ const locations = [
     time: '9:00 AM – 3:00 PM',
     theme: 'Traditional MDYD Festivities Plus',
     image: 'Carnival Inflatable.jpeg',
+    modalImage: 'College Row.jpg',
     addressLines: ['99 Pleasure Drive', 'Detroit, MI  48207', '(between Fountain and Casino)'],
     description: 'Field games, Youth IDOL competition, technology simulations, career exploration, arts & culture.',
     activities: ['Field games', 'Youth IDOL competition', 'Technology simulations', 'Career exploration', 'Arts & culture'],
@@ -55,7 +56,8 @@ const locations = [
     date: 'Tuesday, August 11',
     time: '9:30 AM – 1:45 PM',
     theme: 'Tuesday Market Youth Club (Healthy Eating)',
-    image: 'Kids Painting.jpg',
+    image: 'Peace Sign Girls.jpg',
+    modalImage: 'Pie-Eating Contest.png',
     addressLines: ['2934 Russell Street', 'Detroit, MI  48207', '(Shed 2)'],
     description: 'Food tasting, cooking demonstrations, Farmers Market exploration + shopping, Zumba, yoga.',
     activities: ['Food tasting', 'Cooking demonstrations', 'Farmers Market exploration + shopping', 'Zumba', 'Yoga'],
@@ -73,6 +75,7 @@ const locations = [
     time: '8:30 AM – 3:30 PM',
     theme: 'BGC Open House Clubs Hop',
     image: 'Registration.jpeg',
+    modalImage: 'Registration.jpeg',
     addressLines: ['Dauch / Diehl / Eastpointe /', 'Jackson / Michigan Central', '(Club hop via bus)'],
     description: 'Music studio, culinary kitchen, e-sports, innovation center, industry exploration, games.',
     activities: ['Music studio', 'Culinary kitchen', 'E-sports', 'Innovation center', 'Industry exploration', 'Games'],
@@ -90,6 +93,7 @@ const locations = [
     time: '6:00 PM – 8:15 PM',
     theme: 'Health-Focused Youth Wellness',
     image: 'Dancers.jpg',
+    modalImage: 'Dancers.jpg',
     addressLines: ['7241 McDonald Street', 'Detroit, MI  48210', '(Trailhead)'],
     description: 'Guided youth yoga + fitness session, wellness + mindfulness activities, light movement + recovery.',
     activities: ['Guided youth yoga + fitness session', 'Wellness + mindfulness activities', 'Light movement + recovery'],
@@ -107,6 +111,7 @@ const locations = [
     time: '9:00 AM – 2:00 PM',
     theme: 'Drone Demo Day',
     image: 'Robotics.jpg',
+    modalImage: 'Robotics.jpg',
     addressLines: ['2050 15th Street', 'Detroit, MI 48216', '(Front Lawn)'],
     description: 'Hands-on flight training, obstacle courses, aerial mapping education, career exploration.',
     activities: ['Hands-on flight training', 'Obstacle courses', 'Aerial mapping education', 'Career exploration'],
@@ -124,6 +129,7 @@ const locations = [
     time: '11:00 AM – 6:00 PM',
     theme: 'Summer Celebration',
     image: 'Flag Football .jpeg',
+    modalImage: 'Carnival Inflatable.jpeg',
     addressLines: ['7241 McDonald Street', 'Detroit, MI  48210', '(Trailhead)'],
     description: 'Family-friendly activities, youth-centered programs, community resources, games, music.',
     activities: ['Family-friendly activities', 'Youth-centered programs', 'Community resources', 'Games', 'Music'],
@@ -141,6 +147,7 @@ const locations = [
     time: '5:00 PM – 8:00 PM',
     theme: 'Occupy the Summer Finale: Carnival + Girls Flag Football',
     image: 'Flag Football Trophy.jpeg',
+    modalImage: 'Flag Football Trophy.jpeg',
     addressLines: ['Diehl Boys & Girls Club', '4242 Collingwood St', 'Detroit, MI 48204'],
     description: 'Free haircuts, carnival rides, resource vendors, bounce houses, face painting, live performances.',
     activities: ['Free haircuts', 'Carnival rides', 'Resource vendors', 'Bounce houses', 'Face painting', 'Live performances'],
@@ -158,6 +165,7 @@ const locations = [
     time: '10:00 AM – 2:00 PM',
     theme: 'Youth Sports Showcase',
     image: 'College Row.jpg',
+    modalImage: 'Flag Football .jpeg',
     addressLines: ['1801 W. Jefferson', 'Detroit, MI  48216'],
     description: 'Sports, robotics, chess, on-site youth sports physicals, literacy, mental health resources.',
     activities: ['Sports', 'Robotics', 'Chess', 'On-site youth sports physicals', 'Literacy', 'Mental health resources'],
@@ -200,7 +208,7 @@ function listPanel(title, items) {
 
 function openModal(item, defaultTab = 'details') {
   modalContent.innerHTML = `
-    <div class="modal-hero"><img src="assets/photos/${item.image}" alt="${item.name} event image"></div>
+    <div class="modal-hero"><img src="assets/photos/${item.modalImage || item.image}" alt="${item.name} event image"></div>
     <div class="modal-body">
       <img class="modal-logo" src="${item.logo}" alt="${item.partner} logo">
       <p class="eyebrow"><span>${item.date}</span><span class="eyebrow-time">${item.time}</span></p>

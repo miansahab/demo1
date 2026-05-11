@@ -803,3 +803,186 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
     height:84px !important;
   }
 }
+
+/* Client update: legacy image + larger partner logos + modal logo clipping fix */
+.legacy-photos {
+  min-height: 600px !important;
+}
+.legacy-photos img:nth-child(1) {
+  left: 0 !important;
+  top: 0 !important;
+  width: 58% !important;
+  height: 58% !important;
+  box-shadow: -16px 16px 0 rgba(255,225,0,.72) !important;
+}
+.legacy-photos img:nth-child(2) {
+  right: 0 !important;
+  top: 10% !important;
+  width: 40% !important;
+  height: 34% !important;
+  box-shadow: 16px 16px 0 rgba(233,0,138,.72) !important;
+}
+.legacy-photos img:nth-child(3) {
+  right: 8% !important;
+  bottom: 0 !important;
+  width: 56% !important;
+  height: 46% !important;
+  box-shadow: 16px 16px 0 rgba(0,139,210,.72) !important;
+}
+
+.location-badge {
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 152px !important;
+  height: 96px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 3 !important;
+}
+.location-badge img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
+.location-body {
+  top: 198px !important;
+}
+
+.modal-logo {
+  width: auto !important;
+  max-width: min(280px, 72vw) !important;
+  max-height: 110px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: -58px 0 18px !important;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.35));
+}
+
+@media (max-width: 1050px) {
+  .location-badge {
+    width: 138px !important;
+    height: 86px !important;
+    top: 18px !important;
+  }
+  .location-body {
+    top: 182px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .legacy-photos {
+    min-height: 760px !important;
+  }
+  .legacy-photos img:nth-child(1) {
+    width: 82% !important;
+    height: 32% !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .legacy-photos img:nth-child(2) {
+    width: 56% !important;
+    height: 23% !important;
+    right: 0 !important;
+    top: 35% !important;
+  }
+  .legacy-photos img:nth-child(3) {
+    width: 78% !important;
+    height: 28% !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  .location-badge {
+    width: 126px !important;
+    height: 78px !important;
+    top: 18px !important;
+  }
+  .location-body {
+    top: 166px !important;
+  }
+  .modal-logo {
+    max-width: min(220px, 70vw) !important;
+    max-height: 88px !important;
+    margin: -48px 0 16px !important;
+  }
+}
+
+/* Final client fix: vector partner logos + modal logo clipping */
+.location-badge {
+  top: 18px !important;
+  width: 166px !important;
+  height: 104px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.location-badge img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.location-body {
+  top: 206px !important;
+}
+
+/* Modal logo should sit fully below the image, never clipped by the hero image area */
+.modal-body {
+  overflow: visible !important;
+  padding-top: 24px !important;
+}
+
+.modal-logo {
+  display: block !important;
+  width: auto !important;
+  max-width: min(320px, 72vw) !important;
+  max-height: 120px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 0 0 20px 0 !important;
+  position: relative !important;
+  z-index: 4 !important;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.35));
+}
+
+@media (max-width: 1050px) {
+  .location-badge {
+    width: 150px !important;
+    height: 94px !important;
+    top: 18px !important;
+  }
+
+  .location-body {
+    top: 190px !important;
+  }
+
+  .modal-logo {
+    max-width: min(280px, 72vw) !important;
+    max-height: 108px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .location-badge {
+    width: 134px !important;
+    height: 84px !important;
+    top: 18px !important;
+  }
+
+  .location-body {
+    top: 172px !important;
+  }
+
+  .modal-logo {
+    max-width: min(230px, 72vw) !important;
+    max-height: 92px !important;
+  }
+}
