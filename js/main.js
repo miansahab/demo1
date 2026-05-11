@@ -34,6 +34,7 @@ const locations = [
   {
     name: 'Belle Isle',
     partner: 'Belle Isle',
+    logo: 'assets/logos/partners/belle-isle-conservancy.png',
     date: 'Tuesday, August 11',
     time: '9:00 AM – 3:00 PM',
     theme: 'Traditional MDYD Festivities Plus',
@@ -50,6 +51,7 @@ const locations = [
   {
     name: 'Eastern Market',
     partner: 'Eastern Market',
+    logo: 'assets/logos/partners/eastern-market.png',
     date: 'Tuesday, August 11',
     time: '9:30 AM – 1:45 PM',
     theme: 'Tuesday Market Youth Club (Healthy Eating)',
@@ -66,6 +68,7 @@ const locations = [
   {
     name: 'Boys & Girls Clubs of Greater Detroit',
     partner: 'BGCGD',
+    logo: 'assets/logos/partners/bgcgd.png',
     date: 'Wednesday, August 12',
     time: '8:30 AM – 3:30 PM',
     theme: 'BGC Open House Clubs Hop',
@@ -82,6 +85,7 @@ const locations = [
   {
     name: 'Joe Louis Greenway',
     partner: 'Joe Louis Greenway',
+    logo: 'assets/logos/partners/joe-louis-greenway-partnership.png',
     date: 'Wednesday, August 12',
     time: '6:00 PM – 8:15 PM',
     theme: 'Health-Focused Youth Wellness',
@@ -95,10 +99,10 @@ const locations = [
     siteMap: 'Trailhead map to follow with yoga area, wellness stations, restrooms, hydration and safety points.',
     amenities: sharedAmenities
   },
-
   {
-    name: 'Michigan Central Station',
+    name: 'Michigan Central',
     partner: 'Michigan Central',
+    logo: 'assets/logos/partners/michigan-central.png',
     date: 'Friday, August 14',
     time: '9:00 AM – 2:00 PM',
     theme: 'Drone Demo Day',
@@ -107,7 +111,7 @@ const locations = [
     description: 'Hands-on flight training, obstacle courses, aerial mapping education, career exploration.',
     activities: ['Hands-on flight training', 'Obstacle courses', 'Aerial mapping education', 'Career exploration'],
     schedule: ['9:00 AM – Arrival and safety briefing', 'Morning – Hands-on flight training and obstacle courses', 'Midday – Aerial mapping education', 'Afternoon – Career exploration', '2:00 PM – Departure'],
-    directions: 'Use Michigan Central Station front lawn at 2050 15th St. Final GPS marker to be inserted.',
+    directions: 'Use Michigan Central front lawn at 2050 15th St. Final GPS marker to be inserted.',
     parking: 'Parking and bus staging details to be confirmed with Michigan Central operations.',
     siteMap: 'Front lawn map to follow with demo area, safety perimeter, check-in, restrooms and partner tables.',
     amenities: ['STEM demo zone', 'Safety perimeter signage', 'Restrooms', 'Hydration', 'Staff support', 'Partner tables']
@@ -115,6 +119,7 @@ const locations = [
   {
     name: 'Joe Louis Greenway',
     partner: 'Joe Louis Greenway',
+    logo: 'assets/logos/partners/joe-louis-greenway-partnership.png',
     date: 'Friday, August 14',
     time: '11:00 AM – 6:00 PM',
     theme: 'Summer Celebration',
@@ -131,6 +136,7 @@ const locations = [
   {
     name: 'City of Detroit',
     partner: 'City of Detroit',
+    logo: 'assets/logos/partners/city-of-detroit.png',
     date: 'Friday, August 14',
     time: '5:00 PM – 8:00 PM',
     theme: 'Occupy the Summer Finale: Carnival + Girls Flag Football',
@@ -145,13 +151,14 @@ const locations = [
     amenities: sharedAmenities
   },
   {
-    name: 'Detroit Riverfront Conservancy',
+    name: 'Ralph C. Wilson Park',
     partner: 'Detroit Riverfront Conservancy',
+    logo: 'assets/logos/partners/detroit-riverfront-conservancy.png',
     date: 'Saturday, August 15',
     time: '10:00 AM – 2:00 PM',
     theme: 'Youth Sports Showcase',
     image: 'College Row.jpg',
-    addressLines: ['Ralph C. Wilson Park', '1801 W. Jefferson', 'Detroit, MI  48216'],
+    addressLines: ['1801 W. Jefferson', 'Detroit, MI  48216'],
     description: 'Sports, robotics, chess, on-site youth sports physicals, literacy, mental health resources.',
     activities: ['Sports', 'Robotics', 'Chess', 'On-site youth sports physicals', 'Literacy', 'Mental health resources'],
     schedule: ['10:00 AM – Arrival and check-in', 'Morning – Sports showcase rotations', 'Midday – Robotics, chess, literacy and resource stations', 'Afternoon – Youth sports physicals and closing moment', '2:00 PM – Departure'],
@@ -195,7 +202,7 @@ function openModal(item, defaultTab = 'details') {
   modalContent.innerHTML = `
     <div class="modal-hero"><img src="assets/photos/${item.image}" alt="${item.name} event image"></div>
     <div class="modal-body">
-      <img class="modal-logo" src="assets/logos/mdyd-compact-badge-dark.png" alt="MDYD logo">
+      <img class="modal-logo" src="${item.logo}" alt="${item.partner} logo">
       <p class="eyebrow"><span>${item.date}</span><span class="eyebrow-time">${item.time}</span></p>
       <h3>${item.name}</h3>
       <p class="lead">${item.theme}</p>
@@ -239,7 +246,7 @@ if (grid) {
   grid.innerHTML = locations.map((item, index) => `
     <article class="location-card reveal" tabindex="0" role="button" data-index="${index}" aria-label="View ${item.name} details">
       <img class="location-photo" src="assets/photos/${item.image}" alt="${item.name} image">
-      <span class="location-badge"><img src="assets/logos/mdyd-compact-badge-dark.png" alt="MDYD badge"></span>
+      <span class="location-badge"><img src="${item.logo}" alt="${item.partner} logo"></span>
       <div class="location-body">
         <small class="card-date"><span>${item.date}</span><span>${item.time}</span></small>
         <h3>${item.name}</h3>

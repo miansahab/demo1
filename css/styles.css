@@ -765,3 +765,41 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
     align-self: flex-start !important;
   }
 }
+
+/* Partner logos in location cards + modals */
+.location-badge{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:150px !important;
+  height:88px !important;
+}
+.location-badge img{
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
+.modal-logo{
+  width:240px !important;
+  height:96px !important;
+  object-fit:contain !important;
+}
+@media (max-width: 1050px){
+  .location-badge{
+    width:138px !important;
+    height:80px !important;
+  }
+}
+@media (max-width: 650px){
+  .location-badge{
+    width:132px !important;
+    height:74px !important;
+  }
+  .modal-logo{
+    width:190px !important;
+    height:84px !important;
+  }
+}
