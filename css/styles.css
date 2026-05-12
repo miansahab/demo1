@@ -986,3 +986,60 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
     max-height: 92px !important;
   }
 }
+
+
+/* Client updates: larger Ed + youth focal image, anchor scroll offset, and section order support */
+#about,
+#honorary-cochairs,
+#locations,
+#ed-legacy,
+#sponsorship,
+#volunteer,
+#scholarships,
+#register {
+  scroll-margin-top: 140px;
+}
+
+.legacy-photos img:nth-child(3) {
+  width: 64% !important;
+  height: 52% !important;
+  right: 10% !important;
+  bottom: 5% !important;
+  object-position: 45% 42% !important;
+}
+
+@media (max-width: 700px) {
+  .legacy-photos img:nth-child(3) {
+    width: 82% !important;
+    height: 30% !important;
+    right: 6% !important;
+    bottom: 3% !important;
+    object-position: 45% 42% !important;
+  }
+}
+
+/* Client update: George Deeb quote on Ed Deeb Legacy page */
+.legacy-quote {
+  margin: 28px 0 0;
+  padding: 22px 24px;
+  border-left: 8px solid var(--yellow);
+  background: linear-gradient(135deg, rgba(255,225,0,.12), rgba(0,139,210,.10));
+  box-shadow: 10px 10px 0 rgba(233,0,138,.18);
+}
+
+.legacy-quote p {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.legacy-quote p + p {
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .legacy-quote {
+    padding: 18px;
+  }
+}
