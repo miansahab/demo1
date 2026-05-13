@@ -1365,3 +1365,35 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
     height: auto !important;
   }
 }
+
+
+/* Final client feedback: Ed Deeb text flow + one-line lifespan */
+#ed-legacy .legacy-primary-photo figcaption span {
+  white-space: nowrap !important;
+  font-size: clamp(.82rem, 1.02vw, 1rem) !important;
+  line-height: 1.25 !important;
+}
+
+#ed-legacy .legacy-context {
+  margin: 18px 0 8px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--muted) !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+
+#ed-legacy .legacy-list {
+  margin-top: 8px !important;
+  color: var(--muted) !important;
+}
+
+#ed-legacy .legacy-list li {
+  font-weight: 400 !important;
+}
+
+#ed-legacy .legacy-quote p + p {
+  margin-top: 0 !important;
+}
