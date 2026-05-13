@@ -503,7 +503,7 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
   }
 
   .hero-partner-lockup img {
-    width: min(100%, 790px) !important;
+    width: min(100%, 460px) !important;
     max-width: 790px !important;
     height: auto !important;
     object-fit: contain !important;
@@ -1041,5 +1041,327 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
 @media (max-width: 700px) {
   .legacy-quote {
     padding: 18px;
+  }
+}
+
+/* Client feedback pass: Ed Deeb legacy layout, attribution, and Ralph C. Wilson details */
+.legacy-section .split {
+  align-items: start !important;
+}
+
+.legacy-media {
+  align-self: start;
+}
+
+.legacy-media .legacy-logo {
+  width: min(320px, 86%) !important;
+  margin: 0 0 22px !important;
+}
+
+.legacy-media .legacy-photos {
+  min-height: 640px !important;
+  position: relative !important;
+}
+
+.legacy-primary-photo {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 62% !important;
+  margin: 0 !important;
+  z-index: 2 !important;
+}
+
+.legacy-primary-photo img {
+  position: static !important;
+  width: 100% !important;
+  height: 360px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: -16px 16px 0 rgba(255,225,0,.72) !important;
+}
+
+.legacy-primary-photo figcaption {
+  margin: 22px 0 0 16px;
+  padding: 16px 18px;
+  background: rgba(5,5,7,.88);
+  border-left: 8px solid var(--yellow);
+  box-shadow: 10px 10px 0 rgba(233,0,138,.22);
+  color: #fff;
+}
+
+.legacy-primary-photo figcaption strong,
+.legacy-primary-photo figcaption span {
+  display: block;
+}
+
+.legacy-primary-photo figcaption strong {
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+  line-height: .95;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.legacy-primary-photo figcaption span {
+  margin-top: 7px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.legacy-media .legacy-photos > img:nth-of-type(1) {
+  right: 0 !important;
+  top: 13% !important;
+  left: auto !important;
+  width: 40% !important;
+  height: 31% !important;
+  z-index: 1 !important;
+  box-shadow: 16px 16px 0 rgba(233,0,138,.72) !important;
+}
+
+.legacy-media .legacy-photos > img:nth-of-type(2) {
+  right: 7% !important;
+  bottom: 0 !important;
+  left: auto !important;
+  top: auto !important;
+  width: 62% !important;
+  height: 42% !important;
+  z-index: 3 !important;
+  object-position: 45% 42% !important;
+  box-shadow: 16px 16px 0 rgba(0,139,210,.72) !important;
+}
+
+.legacy-context {
+  margin: 20px 0 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.055);
+  color: #fff;
+  font-weight: 800;
+}
+
+.legacy-section .legacy-quote {
+  grid-column: 1 / -1;
+  margin: 12px 0 0 !important;
+  padding: 28px 30px !important;
+  text-align: left;
+}
+
+.legacy-section .legacy-quote footer {
+  margin-top: 16px;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.detail-grid a {
+  color: var(--yellow);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1050px) {
+  .legacy-media .legacy-logo {
+    width: min(280px, 80%) !important;
+  }
+
+  .legacy-section .legacy-quote {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .legacy-media .legacy-photos {
+    min-height: 780px !important;
+  }
+
+  .legacy-primary-photo {
+    width: 84% !important;
+  }
+
+  .legacy-primary-photo img {
+    height: 300px !important;
+  }
+
+  .legacy-primary-photo figcaption {
+    margin-left: 10px;
+    padding: 14px 16px;
+  }
+
+  .legacy-media .legacy-photos > img:nth-of-type(1) {
+    width: 54% !important;
+    height: 22% !important;
+    top: 43% !important;
+  }
+
+  .legacy-media .legacy-photos > img:nth-of-type(2) {
+    width: 82% !important;
+    height: 28% !important;
+    right: 6% !important;
+    bottom: 2% !important;
+  }
+}
+
+/* Ensure the primary Ed photo/caption overrides earlier collage image rules. */
+.legacy-media .legacy-primary-photo > img {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 360px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  box-shadow: -16px 16px 0 rgba(255,225,0,.72) !important;
+}
+
+@media (max-width: 700px) {
+  .legacy-media .legacy-primary-photo > img {
+    height: 300px !important;
+  }
+}
+
+/* Final layout polish: simple text, larger children photo, no image/text overlap. */
+#ed-legacy .split {
+  grid-template-columns: minmax(0, 1.22fr) minmax(320px, .78fr) !important;
+  gap: clamp(28px, 4vw, 52px) !important;
+  align-items: start !important;
+}
+
+#ed-legacy .legacy-media {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+#ed-legacy .legacy-media .legacy-logo {
+  width: min(260px, 62%) !important;
+  margin: 0 0 24px !important;
+}
+
+#ed-legacy .legacy-media .legacy-photos {
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.15fr) !important;
+  grid-template-areas:
+    "portrait children"
+    "portrait mascots" !important;
+  gap: 22px !important;
+  min-height: 0 !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+#ed-legacy .legacy-primary-photo,
+#ed-legacy .legacy-media .legacy-photos > img {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  z-index: auto !important;
+  transform: none !important;
+}
+
+#ed-legacy .legacy-primary-photo {
+  grid-area: portrait !important;
+}
+
+#ed-legacy .legacy-mascots-photo,
+#ed-legacy .legacy-media .legacy-photos > img:nth-of-type(1) {
+  grid-area: mascots !important;
+  box-shadow: 12px 12px 0 rgba(233,0,138,.68) !important;
+}
+
+#ed-legacy .legacy-children-photo,
+#ed-legacy .legacy-media .legacy-photos > img:nth-of-type(2) {
+  grid-area: children !important;
+  box-shadow: 12px 12px 0 rgba(0,139,210,.72) !important;
+}
+
+#ed-legacy .legacy-primary-photo > img,
+#ed-legacy .legacy-media .legacy-photos > img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border: 1px solid var(--line) !important;
+  background: #08090d !important;
+}
+
+#ed-legacy .legacy-primary-photo > img {
+  box-shadow: -12px 12px 0 rgba(255,225,0,.72) !important;
+}
+
+#ed-legacy .legacy-primary-photo figcaption {
+  margin: 18px 0 0 !important;
+  padding: 14px 16px !important;
+  background: rgba(5,5,7,.82) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  border-left: 6px solid var(--yellow) !important;
+  box-shadow: none !important;
+}
+
+#ed-legacy .legacy-primary-photo figcaption strong {
+  font-family: var(--body) !important;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #fff !important;
+}
+
+#ed-legacy .legacy-primary-photo figcaption span {
+  margin-top: 4px !important;
+  font-size: clamp(.95rem, 1.25vw, 1.08rem) !important;
+  font-weight: 700 !important;
+  color: var(--muted) !important;
+}
+
+#ed-legacy .copy-block h2 {
+  font-size: clamp(2.35rem, 4.2vw, 4.2rem) !important;
+}
+
+#ed-legacy .legacy-context {
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 1050px) {
+  #ed-legacy .split {
+    grid-template-columns: 1fr !important;
+  }
+
+  #ed-legacy .legacy-section .legacy-quote,
+  #ed-legacy .legacy-quote {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #ed-legacy .legacy-media .legacy-logo {
+    width: min(230px, 72%) !important;
+  }
+
+  #ed-legacy .legacy-media .legacy-photos {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "portrait"
+      "children"
+      "mascots" !important;
+    gap: 20px !important;
+  }
+
+  #ed-legacy .legacy-primary-photo > img,
+  #ed-legacy .legacy-media .legacy-photos > img {
+    height: auto !important;
   }
 }
