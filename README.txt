@@ -41,3 +41,9 @@ Current client request pass completed:
 - Ralph C. Wilson Park: updated parking to Assembly Garage with map hyperlink.
 - Ralph C. Wilson Park: changed sports activity wording to sports sampling where applicable.
 - Ralph C. Wilson Park: replaced detailed schedule timeline with the drop-in schedule sentence.
+
+Client update applied:
+- Location logistics populated from Locations Logistics Info.xlsx.
+- GPS marker links added for approved partner location directions.
+- Amenities removed Restrooms / Staff and Volunteer Check-In language where requested.
+- Volunteer form link disabled until the Microsoft Forms link is provided.

@@ -28,7 +28,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.14 });
 revealEls.forEach(el => observer.observe(el));
 
-const sharedAmenities = ['Hydration stations', 'Restrooms or portable restrooms', 'Staff and volunteer check-in', 'Family-friendly activity zones', 'First-aid / safety support', 'Wayfinding signage'];
+const sharedAmenities = ['Hydration stations', 'Family-friendly activity zones', 'First-aid / safety support', 'Wayfinding signage'];
 
 const locations = [
   {
@@ -43,10 +43,10 @@ const locations = [
     addressLines: ['99 Pleasure Drive', 'Detroit, MI  48207', '(between Fountain and Casino)'],
     description: 'Field games, Youth IDOL competition, technology simulations, career exploration, arts & culture.',
     activities: ['Field games', 'Youth IDOL competition', 'Technology simulations', 'Career exploration', 'Arts & culture'],
-    schedule: ['9:00 AM – Arrival and check-in', 'Morning – Field games, simulations and activity rotations', 'Midday – Youth IDOL and arts & culture programming', 'Afternoon – Career exploration and closing activities', '3:00 PM – Departure'],
+    schedule: ['Drop in from 9:00 AM – 3:00 PM to engage in all activities'],
     directions: 'Access via Belle Isle / MacArthur Bridge. Final GPS marker and roadway directions will be inserted when approved.',
-    parking: 'Parking details to be confirmed with the final Belle Isle site plan.',
-    siteMap: 'Site map to follow with entrance, activity zones, restrooms, hydration and first-aid markers.',
+    parking: 'Park in surface lot east of Fountain or along road.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   },
   {
@@ -62,9 +62,9 @@ const locations = [
     description: 'Food tasting, cooking demonstrations, Farmers Market exploration + shopping, Zumba, yoga.',
     activities: ['Food tasting', 'Cooking demonstrations', 'Farmers Market exploration + shopping', 'Zumba', 'Yoga'],
     schedule: ['9:30 AM – Arrival and check-in', 'Morning – Market exploration and cooking demonstrations', 'Midday – Food tasting and healthy eating activities', 'Afternoon – Zumba / yoga and closeout', '1:45 PM – Departure'],
-    directions: 'Use Eastern Market district access near Russell Street and Shed 2. Final GPS marker to be inserted.',
-    parking: 'Parking and bus drop-off details to be finalized with Eastern Market operations.',
-    siteMap: 'Shed 2 site map to follow with activity zones, restrooms, food stations and group meeting points.',
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Eastern+Market+Shed+2+2934+Russell+Street+Detroit+MI+48207" target="_blank" rel="noopener">Eastern Market Shed 2</a>.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   },
   {
@@ -80,10 +80,10 @@ const locations = [
     description: 'Music studio, culinary kitchen, e-sports, innovation center, industry exploration, games.',
     activities: ['Music studio', 'Culinary kitchen', 'E-sports', 'Innovation center', 'Industry exploration', 'Games'],
     schedule: ['8:30 AM – Arrival and bus coordination', 'Morning – Club hop rotations', 'Midday – Program showcases and lunch / hydration break', 'Afternoon – Industry exploration and games', '3:30 PM – Departure'],
-    directions: 'Club-hop route and individual GPS markers to be inserted once bus routing is finalized.',
-    parking: 'Parking, bus staging and pickup/drop-off details to follow for each club stop.',
-    siteMap: 'Club-hop route map to follow with each stop, check-in points and accessibility details.',
-    amenities: ['Indoor check-in', 'Restrooms', 'Staff and volunteer support', 'Information tables', 'Bus coordination', 'Accessibility guidance']
+    directions: 'Club-hop route pending.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
+    amenities: ['Indoor check-in', 'Information tables', 'Bus coordination', 'Accessibility guidance']
   },
   {
     name: 'Joe Louis Greenway',
@@ -98,9 +98,9 @@ const locations = [
     description: 'Guided youth yoga + fitness session, wellness + mindfulness activities, light movement + recovery.',
     activities: ['Guided youth yoga + fitness session', 'Wellness + mindfulness activities', 'Light movement + recovery'],
     schedule: ['6:00 PM – Check-in and welcome', '6:20 PM – Guided youth yoga + fitness session', '7:15 PM – Wellness and mindfulness activities', '7:50 PM – Light movement + recovery', '8:15 PM – Closeout'],
-    directions: 'Use Warren Trailhead access at 7241 McDonald St. Final GPS marker to be inserted.',
-    parking: 'Parking and bus drop-off details to be coordinated with Greenway site operations.',
-    siteMap: 'Warren Trailhead map to follow with yoga area, wellness stations, restrooms, hydration and safety points.',
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Warren+Trailhead+7241+McDonald+Street+Detroit+MI+48210" target="_blank" rel="noopener">Warren Trailhead</a>.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   },
   {
@@ -116,10 +116,10 @@ const locations = [
     description: 'Hands-on flight training, obstacle courses, aerial mapping education, career exploration.',
     activities: ['Hands-on flight training', 'Obstacle courses', 'Aerial mapping education', 'Career exploration'],
     schedule: ['9:00 AM – Arrival and safety briefing', 'Morning – Hands-on flight training and obstacle courses', 'Midday – Aerial mapping education', 'Afternoon – Career exploration', '2:00 PM – Departure'],
-    directions: 'Use Michigan Central front lawn at 2050 15th St. Final GPS marker to be inserted.',
-    parking: 'Parking and bus staging details to be confirmed with Michigan Central operations.',
-    siteMap: 'Front lawn map to follow with demo area, safety perimeter, check-in, restrooms and partner tables.',
-    amenities: ['STEM demo zone', 'Safety perimeter signage', 'Restrooms', 'Hydration', 'Staff support', 'Partner tables']
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Newlab+at+Michigan+Central+2050+15th+Street+Detroit+MI+48216" target="_blank" rel="noopener">Newlab @ Michigan Central</a>.',
+    parking: 'Parking at Bagley Mobility Hub or street parking around MCS and Newlab.',
+    siteMap: 'Site Map provided closer to event.',
+    amenities: ['STEM demo zone', 'Safety perimeter signage', 'Hydration', 'Partner tables']
   },
   {
     name: 'Joe Louis Greenway',
@@ -134,9 +134,9 @@ const locations = [
     description: 'Family-friendly activities, youth-centered programs, community resources, games, music.',
     activities: ['Family-friendly activities', 'Youth-centered programs', 'Community resources', 'Games', 'Music'],
     schedule: ['11:00 AM – Arrival and welcome', 'Afternoon – Open activity rotations and youth-centered programs', 'Community resource and game blocks throughout the day', 'Music and celebration moments', '6:00 PM – Closeout'],
-    directions: 'Use Warren Trailhead access at 7241 McDonald St. Final GPS marker to be inserted.',
-    parking: 'Parking and bus staging plan to align with the final Greenway activation footprint.',
-    siteMap: 'Map to follow with activity areas, community resources, games, music, hydration and restrooms.',
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Warren+Trailhead+7241+McDonald+Street+Detroit+MI+48210" target="_blank" rel="noopener">Warren Trailhead</a>.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   },
   {
@@ -152,9 +152,9 @@ const locations = [
     description: 'Free haircuts, carnival rides, resource vendors, bounce houses, face painting, live performances.',
     activities: ['Free haircuts', 'Carnival rides', 'Resource vendors', 'Bounce houses', 'Face painting', 'Live performances'],
     schedule: ['5:00 PM – Arrival and check-in', '5:15 PM – Carnival games and activities open', '6:00 PM – Flag football / featured programming', '7:30 PM – Recognition moment and performances', '8:00 PM – Departure'],
-    directions: 'Use Diehl Boys & Girls Club at 4242 Collingwood St. Final GPS marker to be inserted.',
-    parking: 'Parking, team drop-off and equipment unloading zones to be finalized.',
-    siteMap: 'Site map to follow with field, carnival footprint, check-in, restrooms, hydration and pickup zones.',
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Diehl+Boys+and+Girls+Club+4242+Collingwood+Street+Detroit+MI+48204" target="_blank" rel="noopener">Diehl Boys & Girls Club</a>.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   },
   {
@@ -170,9 +170,9 @@ const locations = [
     description: 'Sports sampling, robotics, chess, on-site youth sports physicals, literacy, mental health resources.',
     activities: ['Sports sampling', 'Robotics', 'Chess', 'On-site youth sports physicals', 'Literacy', 'Mental health resources'],
     schedule: ['Drop in at any time between 10:00 AM – 2:00 PM to engage in all activities'],
-    directions: 'Use Ralph C. Wilson Park at 1801 W. Jefferson. Final GPS marker to be inserted.',
-    parking: 'Free parking in the <a href="https://www.google.com/maps/search/?api=1&query=Assembly+Garage+1701+W+Lafayette+Blvd+Detroit+MI+48216" target="_blank" rel="noopener">Assembly Garage at 1701 W Lafayette Blvd, Detroit, MI 48216</a>.',
-    siteMap: 'Riverfront map to follow with sports sampling zones, partner tables, restrooms, hydration, first aid and pickup.',
+    directions: 'GPS marker: <a href="https://www.google.com/maps/search/?api=1&query=Ralph+C+Wilson+Park+1801+W+Jefferson+Detroit+MI+48216" target="_blank" rel="noopener">Wilson Park</a>.',
+    parking: 'Parking info to follow.',
+    siteMap: 'Site Map provided closer to event.',
     amenities: sharedAmenities
   }
 ];

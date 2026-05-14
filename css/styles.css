@@ -1397,3 +1397,8 @@ body.modal-open{overflow:hidden;touch-action:none}.menu-toggle{width:48px;height
 #ed-legacy .legacy-quote p + p {
   margin-top: 0 !important;
 }
+
+
+/* Client update: volunteer form is pending Microsoft Forms link */
+.info-panel .pending-link{display:inline-flex;margin-top:18px;color:var(--yellow);font-weight:900;text-transform:uppercase;opacity:.78;cursor:not-allowed}
+.detail-grid a{color:var(--yellow);font-weight:900;text-decoration:underline;text-underline-offset:3px}
