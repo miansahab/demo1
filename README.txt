@@ -47,3 +47,5 @@ Client update applied:
 - GPS marker links added for approved partner location directions.
 - Amenities removed Restrooms / Staff and Volunteer Check-In language where requested.
 - Volunteer form link disabled until the Microsoft Forms link is provided.
+
+Register section update: removed Forms/Waivers copy/button, changed sites to locations, and pointed Register Here to docs/youth-registration-form-link.html. Replace that placeholder with the approved Youth Registration Form URL/file when available.
